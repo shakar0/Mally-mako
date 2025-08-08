@@ -7,6 +7,15 @@
   <meta name="description" content="فرۆشگای چەقۆ و بەرهەمە دەرەهاواییەکان لە سلێمانی. پەیوەندی خێرا، داواکردن لە واتساپ، و ناونیشان لە نەخشە.">
   <meta name="theme-color" content="#13A78E">
 
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-V6Y63EY56C"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){ dataLayer.push(arguments); }
+    gtag('js', new Date());
+    gtag('config', 'G-V6Y63EY56C'); // GA4 Measurement ID
+  </script>
+
   <!-- Canonical + Social Cards -->
   <link rel="canonical" href="https://shakar0.github.io/Mally-mako/index.html">
   <meta property="og:title" content="Mally Mako - Links & Contacts">
@@ -28,9 +37,9 @@
   <link rel="preconnect" href="https://maps.googleapis.com">
   <link rel="preconnect" href="https://maps.gstatic.com" crossorigin>
 
-  <!-- Security NOTE: أضفنا 'unsafe-inline' للسكربت كي يعمل زر اللغة في ملف واحد -->
+  <!-- CSP: السماح لسكربت GA + خرائط + إنلاين للّغة -->
   <meta http-equiv="Content-Security-Policy"
-        content="default-src 'self'; img-src 'self' https: data:; script-src 'self' 'unsafe-inline' https://www.google.com https://maps.googleapis.com; style-src 'self' 'unsafe-inline'; frame-src https://www.google.com;">
+        content="default-src 'self'; img-src 'self' https: data:; script-src 'self' 'unsafe-inline' https://www.google.com https://maps.googleapis.com https://www.googletagmanager.com; style-src 'self' 'unsafe-inline'; frame-src https://www.google.com; connect-src 'self' https://www.google-analytics.com https://region1.google-analytics.com; object-src 'none'; base-uri 'self';">
   <meta name="referrer" content="strict-origin-when-cross-origin">
 
   <style>
@@ -102,23 +111,23 @@
         </div>
       </header>
 
-      <!-- حسابات -->
+      <!-- الحسابات -->
       <section class="section">
         <h2 id="t-acc-unique">📌 بابەتە جیاواز و شاخەوانیەکان</h2>
         <div class="grid">
-          <a class="btn" href="https://www.tiktok.com/@mallymako?utm_source=linkinbio&utm_medium=website&utm_campaign=mako" target="_blank" rel="noopener" aria-label="TikTok"><span class="l">TikTok</span><span class="r">↗</span></a>
-          <a class="btn" href="https://www.instagram.com/malle_mako?utm_source=linkinbio&utm_medium=website&utm_campaign=mako" target="_blank" rel="noopener" aria-label="Instagram"><span class="l">Instagram</span><span class="r">↗</span></a>
-          <a class="btn" href="https://www.facebook.com/share/19YAf8LGAp/?mibextid=wwXIfr&utm_source=linkinbio&utm_medium=website&utm_campaign=mako" target="_blank" rel="noopener" aria-label="Facebook"><span class="l">Facebook</span><span class="r">↗</span></a>
-          <a class="btn" href="https://t.me/mallimako?utm_source=linkinbio&utm_medium=website&utm_campaign=mako" target="_blank" rel="noopener" aria-label="Telegram"><span class="l" id="t-telegram">کەناڵی تێلەگرام</span><span class="r">↗</span></a>
+          <a class="btn" data-social="tiktok1" href="https://www.tiktok.com/@mallymako?utm_source=linkinbio&utm_medium=website&utm_campaign=mako" target="_blank" rel="noopener" aria-label="TikTok"><span class="l">TikTok</span><span class="r">↗</span></a>
+          <a class="btn" data-social="instagram1" href="https://www.instagram.com/malle_mako?utm_source=linkinbio&utm_medium=website&utm_campaign=mako" target="_blank" rel="noopener" aria-label="Instagram"><span class="l">Instagram</span><span class="r">↗</span></a>
+          <a class="btn" data-social="facebook1" href="https://www.facebook.com/share/19YAf8LGAp/?mibextid=wwXIfr&utm_source=linkinbio&utm_medium=website&utm_campaign=mako" target="_blank" rel="noopener" aria-label="Facebook"><span class="l">Facebook</span><span class="r">↗</span></a>
+          <a class="btn" data-social="telegram" href="https://t.me/mallimako?utm_source=linkinbio&utm_medium=website&utm_campaign=mako" target="_blank" rel="noopener" aria-label="Telegram"><span class="l" id="t-telegram">کەناڵی تێلەگرام</span><span class="r">↗</span></a>
         </div>
       </section>
 
       <section class="section">
         <h2 id="t-acc-knives">🔪 هەژمارەکانی بەشی چەقۆکان</h2>
         <div class="grid">
-          <a class="btn" href="https://www.tiktok.com/@mallymako2?utm_source=linkinbio&utm_medium=website&utm_campaign=mako" target="_blank" rel="noopener"><span class="l">TikTok 2</span><span class="r">↗</span></a>
-          <a class="btn" href="https://www.instagram.com/chaqokanimako?utm_source=linkinbio&utm_medium=website&utm_campaign=mako" target="_blank" rel="noopener"><span class="l">Instagram 2</span><span class="r">↗</span></a>
-          <a class="btn" href="https://www.facebook.com/share/1GbsF2TjgC/?mibextid=wwXIfr&utm_source=linkinbio&utm_medium=website&utm_campaign=mako" target="_blank" rel="noopener"><span class="l">Facebook 2</span><span class="r">↗</span></a>
+          <a class="btn" data-social="tiktok2" href="https://www.tiktok.com/@mallymako2?utm_source=linkinbio&utm_medium=website&utm_campaign=mako" target="_blank" rel="noopener"><span class="l">TikTok 2</span><span class="r">↗</span></a>
+          <a class="btn" data-social="instagram2" href="https://www.instagram.com/chaqokanimako?utm_source=linkinbio&utm_medium=website&utm_campaign=mako" target="_blank" rel="noopener"><span class="l">Instagram 2</span><span class="r">↗</span></a>
+          <a class="btn" data-social="facebook2" href="https://www.facebook.com/share/1GbsF2TjgC/?mibextid=wwXIfr&utm_source=linkinbio&utm_medium=website&utm_campaign=mako" target="_blank" rel="noopener"><span class="l">Facebook 2</span><span class="r">↗</span></a>
         </div>
       </section>
 
@@ -126,21 +135,21 @@
       <section class="section">
         <h2 id="t-fast-order">🧾 ڕێگاکانی داواکردنی خێرا</h2>
         <div class="grid">
-          <a class="btn" id="wa1" target="_blank" rel="noopener"><span class="l">💬 <span id="t-wa0770">داواکردن لە واتساب (0770)</span></span><span class="r">↗</span></a>
-          <a class="btn" id="wa2" target="_blank" rel="noopener"><span class="l">💬 <span id="t-wa0750">داواکردن لە واتساب (0750)</span></span><span class="r">↗</span></a>
+          <a class="btn" id="wa1" data-wa="0770" target="_blank" rel="noopener"><span class="l">💬 <span id="t-wa0770">داواکردن لە واتساب (0770)</span></span><span class="r">↗</span></a>
+          <a class="btn" id="wa2" data-wa="0750" target="_blank" rel="noopener"><span class="l">💬 <span id="t-wa0750">داواکردن لە واتساب (0750)</span></span><span class="r">↗</span></a>
 
           <div class="contact-card" aria-label="Phones">
             <div class="contact-row">
               <div class="phone">📞 <span id="t-direct">پەیوەندی ڕاستەوخۆ:</span> <b>+964 770 140 5137</b></div>
               <div class="actions">
-                <a class="btn pill" href="tel:+9647701405137" id="t-call0770">📲 پەیوەندی 0770</a>
+                <a class="btn pill" data-call="0770" href="tel:+9647701405137" id="t-call0770">📲 پەیوەندی 0770</a>
                 <button class="btn pill" data-copy="+9647701405137" type="button" id="t-copy1">کۆپی ژمارە</button>
               </div>
             </div>
             <div class="contact-row">
               <div class="phone">📞 <span id="t-direct2">پەیوەندی ڕاستەوخۆ:</span> <b>+964 750 140 5137</b></div>
               <div class="actions">
-                <a class="btn pill" href="tel:+9647501405137" id="t-call0750">📲 پەیوەندی 0750</a>
+                <a class="btn pill" data-call="0750" href="tel:+9647501405137" id="t-call0750">📲 پەیوەندی 0750</a>
                 <button class="btn pill" data-copy="+9647501405137" type="button" id="t-copy2">کۆپی ژمارە</button>
               </div>
             </div>
@@ -148,7 +157,7 @@
         </div>
       </section>
 
-      <!-- العنوان (Kurdî / عربي / English) -->
+      <!-- العنوان -->
       <section class="section">
         <h2 id="t-address-title">📍 ناونیشان</h2>
         <div class="contact-card" aria-label="Store Address">
@@ -161,7 +170,7 @@
       <section class="section">
         <h2 id="t-map-title">🗺️ نەخشە / الخريطة / Map</h2>
         <div class="grid">
-          <a class="btn" href="https://maps.app.goo.gl/opRr37SBETZs3yWR7?g_st=ipc" target="_blank" rel="noopener">
+          <a class="btn" data-social="maps" href="https://maps.app.goo.gl/opRr37SBETZs3yWR7?g_st=ipc" target="_blank" rel="noopener">
             <span class="l" id="t-open-maps">کردنەوە لە نەخشەی Google</span><span class="r">↗</span>
           </a>
           <div class="map-wrap" aria-label="Map">
@@ -179,7 +188,7 @@
 
   <div id="toast" role="status" aria-live="polite">ژمارەکە کۆپی کرا ✅</div>
 
-  <!-- JSON-LD -->
+  <!-- JSON-LD (كما هو) -->
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
@@ -209,7 +218,7 @@
   </script>
 
   <script>
-    // نصوص الواجهات + العنوان لكل لغة
+    /* ===================== اللغات ===================== */
     const T = {
       ku: {
         dir:"rtl",
@@ -282,7 +291,6 @@
       }
     };
 
-    // عناصر قابلة للتبديل
     const el = {
       title: document.getElementById('t-title'),
       tagline: document.getElementById('t-tagline'),
@@ -310,7 +318,6 @@
     function applyLang(lang='ku'){
       const cfg = T[lang] || T.ku;
 
-      // نصوص عامة
       el.title.textContent = cfg.title;
       el.tagline.textContent = cfg.tagline;
       el.accUnique.textContent = cfg.acc_unique;
@@ -325,24 +332,21 @@
       el.copy1.textContent = cfg.copy;
       el.copy2.textContent = cfg.copy;
       el.addressTitle.textContent = cfg.address_title;
-      el.addr1.textContent = cfg.addr1;          // <-- العنوان حسب اللغة
-      el.addr2.textContent = cfg.addr2;          // <-- العنوان حسب اللغة
+      el.addr1.textContent = cfg.addr1;
+      el.addr2.textContent = cfg.addr2;
       el.mapTitle.textContent = cfg.map_title;
       el.openMaps.textContent = cfg.open_in_maps;
       el.mapNote.textContent = cfg.map_note;
       el.footer.textContent = cfg.footer;
       el.toast.textContent = cfg.copied;
 
-      // dir/lang
       document.documentElement.setAttribute('lang', lang);
       document.documentElement.setAttribute('dir', cfg.dir);
 
-      // رسالة واتساب حسب اللغة
       const msg = encodeURIComponent(cfg.wa_msg);
       document.getElementById('wa1').setAttribute('href', "https://wa.me/9647701405137?text=" + msg);
       document.getElementById('wa2').setAttribute('href', "https://wa.me/9647501405137?text=" + msg);
 
-      // حالة الأزرار
       document.querySelectorAll('.langbar button').forEach(b=>{
         const on = b.getAttribute('data-lang') === lang;
         b.classList.toggle('active', on);
@@ -352,13 +356,70 @@
       localStorage.setItem('mako_lang', lang);
     }
 
-    // نسخ الرقم + تبديل اللغة
     function showToast(t){ el.toast.textContent = t; el.toast.style.display='block'; setTimeout(()=> el.toast.style.display='none', 1400); }
+
+    // نسخ الرقم + تبديل اللغة
     document.addEventListener('click', e=>{
       const btn = e.target.closest('[data-copy]');
-      if(btn){ navigator.clipboard.writeText(btn.getAttribute('data-copy')).then(()=> showToast(el.toast.textContent)); }
+      if(btn){
+        navigator.clipboard.writeText(btn.getAttribute('data-copy'))
+          .then(()=> showToast(el.toast.textContent));
+        // GA: copy number
+        if(window.gtag){ gtag('event','copy_number',{value:1, number: btn.getAttribute('data-copy')}); }
+      }
       const langBtn = e.target.closest('[data-lang]');
       if(langBtn){ applyLang(langBtn.getAttribute('data-lang')); }
+    });
+
+    /* ===================== تتبّع GA المخصّص ===================== */
+    function trackOutbound(a){
+      if(!window.gtag || !a) return;
+      const url = a.href;
+      try{
+        const u = new URL(url);
+        const isSameHost = u.host === location.host;
+        if(!isSameHost){
+          gtag('event', 'outbound_click', {
+            link_url: url,
+            link_domain: u.host,
+            link_text: (a.textContent||'').trim().slice(0,60)
+          });
+        }
+      }catch(e){}
+    }
+
+    function trackWhatsApp(a){
+      if(!window.gtag || !a) return;
+      gtag('event', 'whatsapp_click', {
+        line: a.getAttribute('data-wa') || '',
+        link_url: a.href
+      });
+    }
+
+    function trackCall(a){
+      if(!window.gtag || !a) return;
+      gtag('event','call_click',{
+        line: a.getAttribute('data-call') || '',
+        link_url: a.href
+      });
+    }
+
+    document.addEventListener('click', (e)=>{
+      const a = e.target.closest('a');
+      if(!a) return;
+      const href = a.getAttribute('href') || '';
+      // واتساب
+      if(a.hasAttribute('data-wa') || href.includes('wa.me')){
+        trackWhatsApp(a);
+      }
+      // اتصال
+      if(a.hasAttribute('data-call') || href.startsWith('tel:')){
+        trackCall(a);
+      }
+      // روابط سوشيال/خارجية
+      if(a.hasAttribute('data-social') || href.startsWith('http')){
+        trackOutbound(a);
+      }
     });
 
     // ابدأ باللغة المحفوظة أو الكردية
