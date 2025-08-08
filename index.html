@@ -4,75 +4,106 @@
 <meta charset="utf-8" />
 <meta name="viewport" content="width=device-width,initial-scale=1" />
 <title>Mally Mako - روابط المتجر</title>
-<meta name="description" content="متجر لأدوات التخييم، السكاكين، والمعدات الاحترافية مع توصيل لجميع المحافظات. وسائل الطلب والحسابات الرسمية.">
+<meta name="description" content="متجر لأدوات التخييم، السكاكين، والمعدات الاحترافية مع توصيل لجميع المحافظات.">
 <meta name="theme-color" content="#13A78E">
 
 <!-- Open Graph -->
 <meta property="og:title" content="Mally Mako - روابط المتجر">
-<meta property="og:description" content="كل روابط الطلب والتواصل والحسابات الرسمية في مكان واحد.">
+<meta property="og:description" content="كل روابط الطلب والحسابات الرسمية في مكان واحد.">
 <meta property="og:type" content="website">
 
 <style>
   :root{
-    --bg:#0f1220; --card:#171a2b; --text:#f2f4ff; --muted:#aab1d0;
-    --accent:#13A78E; --line:#242946; --ok:#13A78E;
+    --brand:#13A78E;
+    --bg:#0f1220; --card:#171a2b; --text:#f2f4ff; --muted:#aab1d0; --line:#242946;
   }
   @media (prefers-color-scheme: light){
-    :root{ --bg:#f7f8ff; --card:#ffffff; --text:#0f1220; --muted:#556; --accent:#13A78E; --line:#e6e9f4; --ok:#13A78E; }
+    :root{ --bg:#f6f9ff; --card:#ffffff; --text:#111827; --muted:#5b647a; --line:#e6eaf4; }
   }
   *{ box-sizing:border-box }
-  body{ margin:0; font-family: system-ui,-apple-system,"Segoe UI",Tahoma,Arial; background:linear-gradient(160deg, var(--bg), #0b0f1c); color:var(--text) }
-  .wrap{ max-width:760px; margin:0 auto; padding:28px 16px 60px }
+  body{
+    margin:0; font-family: system-ui,-apple-system,"Segoe UI",Tahoma,Arial;
+    color:var(--text);
+    background:
+      radial-gradient(1200px 600px at 80% -10%, rgba(19,167,142,.25), transparent 60%),
+      radial-gradient(1000px 500px at -10% 0%, rgba(19,167,142,.18), transparent 55%),
+      linear-gradient(160deg, var(--bg), #0b1021 70%);
+  }
+  .wrap{ max-width:860px; margin:0 auto; padding:28px 16px 70px }
   .card{ background:var(--card); border:1px solid var(--line); border-radius:18px; padding:22px; box-shadow:0 10px 30px rgba(0,0,0,.22) }
-  header.brand{ display:flex; align-items:center; gap:14px; margin-bottom:8px }
-  .logo{ width:58px; height:58px; border-radius:14px; background:var(--ok); display:flex; align-items:center; justify-content:center; font-weight:800; color:#052; letter-spacing:.5px }
-  h1{ margin:0; font-size:26px }
-  p.desc{ margin:6px 0 16px; color:var(--muted); line-height:1.7 }
-  .grid{ display:grid; gap:12px }
+
+  /* HERO */
+  header.brand{
+    display:flex; align-items:center; gap:16px; margin-bottom:2px;
+    background:linear-gradient(135deg, rgba(19,167,142,.18), rgba(255,255,255,.02));
+    border:1px solid var(--line); border-radius:16px; padding:16px;
+  }
+  .logo{
+    width:66px; height:66px; border-radius:14px; background:var(--brand);
+    display:flex; align-items:center; justify-content:center; font-weight:900; color:#052; letter-spacing:.5px; font-size:20px;
+    box-shadow:0 8px 24px rgba(19,167,142,.35);
+  }
+  h1{ margin:0; font-size:28px }
+  p.desc{ margin:6px 0 10px; color:var(--muted); line-height:1.7 }
+
+  .langbar{ display:flex; gap:8px; flex-wrap:wrap; margin:10px 0 2px }
+  .langbar button{
+    border:1px solid var(--line); background:transparent; color:var(--text);
+    padding:8px 12px; border-radius:10px; cursor:pointer; transition:.2s;
+  }
+  .langbar button.active{ border-color:var(--brand); box-shadow:0 0 0 2px rgba(19,167,142,.18) inset }
+
+  /* sections */
   .section{ margin-top:18px }
-  .section h2{ margin:8px 0; font-size:16px; color:var(--accent) }
+  .section h2{ margin:8px 0 10px; font-size:17px; color:var(--brand) }
+  .grid{ display:grid; gap:12px }
+
   a.btn, .btn{
     display:flex; align-items:center; justify-content:space-between; gap:12px;
-    padding:14px 16px; background:#0f1330; border:1px solid #25305d; color:var(--text);
+    padding:14px 16px; background:rgba(255,255,255,.04); border:1px solid var(--line); color:var(--text);
     text-decoration:none; border-radius:12px; transition:.2s; cursor:pointer;
   }
-  a.btn:hover, .btn:hover{ transform:translateY(-2px); border-color:var(--accent) }
+  a.btn:hover, .btn:hover{ transform:translateY(-2px); border-color:var(--brand) }
   .btn .l{ display:flex; align-items:center; gap:10px; font-weight:600 }
   .btn .r{ opacity:.85 }
-  .pill{ font-size:12px; padding:6px 10px; background:#11173d; border:1px solid #2a356a; border-radius:999px; color:var(--muted) }
+
   .contact-card{
-    display:grid; gap:10px; background:rgba(255,255,255,.02); border:1px dashed var(--line);
-    padding:12px; border-radius:12px;
+    display:grid; gap:12px; background:rgba(255,255,255,.02); border:1px dashed var(--line);
+    padding:14px; border-radius:12px;
   }
-  .contact-row{ display:flex; gap:8px; flex-wrap:wrap; align-items:center; justify-content:space-between }
+  .contact-row{ display:flex; gap:10px; flex-wrap:wrap; align-items:center; justify-content:space-between }
   .phone{
-    display:flex; gap:8px; align-items:center; padding:10px 12px; border:1px solid var(--line);
-    border-radius:10px; background:rgba(255,255,255,.02); min-width:260px; flex:1;
+    display:flex; gap:10px; align-items:center; padding:12px 14px; border:1px solid var(--line);
+    border-radius:12px; background:rgba(255,255,255,.03); min-width:280px; flex:1; box-shadow: inset 0 0 0 1px rgba(19,167,142,.08);
   }
-  .phone b{ direction:ltr }
+  .phone b{ direction:ltr; letter-spacing:.5px }
   .actions{ display:flex; gap:8px; flex-wrap:wrap }
+  .pill{
+    font-size:12px; padding:8px 10px; background:rgba(19,167,142,.12); border:1px solid rgba(19,167,142,.35);
+    border-radius:999px; color:var(--text)
+  }
+
   .map-wrap{ margin-top:10px; border:1px solid var(--line); border-radius:12px; overflow:hidden }
-  iframe.map{ width:100%; height:280px; border:0 }
-  .note{ margin-top:14px; color:var(--muted); font-size:12.8px }
+  iframe.map{ width:100%; height:320px; border:0 }
+
   .footer{ text-align:center; margin-top:22px; color:#8e95b8; font-size:12.5px }
   .copy-toast{
-    position:fixed; inset-inline:0; bottom:16px; margin:auto; background:var(--ok); color:#052;
-    width:max-content; padding:10px 14px; border-radius:999px; box-shadow:0 8px 24px rgba(0,0,0,.25); display:none; font-weight:700;
+    position:fixed; inset-inline:0; bottom:16px; margin:auto; background:#19c3a7; color:#052;
+    width:max-content; padding:10px 14px; border-radius:999px; box-shadow:0 8px 24px rgba(0,0,0,.25); display:none; font-weight:800;
   }
   .icons{font-style:normal}
-  .langbar{ display:flex; gap:8px; flex-wrap:wrap; margin:8px 0 4px }
-  .langbar button{ border:1px solid var(--line); background:transparent; color:var(--text); padding:8px 10px; border-radius:10px; cursor:pointer }
-  .langbar button.active{ border-color:var(--accent) }
 </style>
 </head>
 <body>
   <div class="wrap">
     <div class="card">
+
+      <!-- HERO -->
       <header class="brand">
         <div class="logo">MAKO</div>
         <div>
           <h1 data-i18n="title">Mally Mako</h1>
-          <p class="desc" data-i18n="tagline_ar">متجر لأدوات التخييم، السكاكين، والمعدات الاحترافية — توصيل لجميع المحافظات.</p>
+          <p class="desc" data-i18n="tagline">متجر لأدوات التخييم، السكاكين، والمعدات الاحترافية — توصيل لجميع المحافظات.</p>
           <div class="langbar">
             <button data-lang="ar" class="active">العربية</button>
             <button data-lang="en">English</button>
@@ -81,7 +112,27 @@
         </div>
       </header>
 
-      <!-- طرق الطلب والتواصل -->
+      <!-- 1) حسابات السوشيال بالأعلى -->
+      <section class="section">
+        <h2 data-i18n="acc_unique">📌 حسابات المنتجات الفريدة</h2>
+        <div class="grid">
+          <a class="btn" href="https://www.tiktok.com/@mallymako?_t=ZS-8yiC2VJjiOW&_r=1" target="_blank" rel="noopener"><span class="l">TikTok</span><span class="r">↗</span></a>
+          <a class="btn" href="https://www.instagram.com/malle_mako?igsh=MTAwZTNmeWd1enhkeA%3D%3D&utm_source=qr" target="_blank" rel="noopener"><span class="l">Instagram</span><span class="r">↗</span></a>
+          <a class="btn" href="https://www.facebook.com/share/19YAf8LGAp/?mibextid=wwXIfr" target="_blank" rel="noopener"><span class="l">Facebook</span><span class="r">↗</span></a>
+          <a class="btn" href="https://t.me/mallimako" target="_blank" rel="noopener"><span class="l" data-i18n="telegram">قناتنا على تليجرام</span><span class="r">↗</span></a>
+        </div>
+      </section>
+
+      <section class="section">
+        <h2 data-i18n="acc_knives">🔪 حسابات متجر السكاكين</h2>
+        <div class="grid">
+          <a class="btn" href="https://www.tiktok.com/@mallymako2?_t=ZS-8yiCEeCD54a&_r=1" target="_blank" rel="noopener"><span class="l">TikTok 2</span><span class="r">↗</span></a>
+          <a class="btn" href="https://www.instagram.com/chaqokanimako?igsh=MXY1aDhmZGZiazhxag%3D%3D&utm_source=qr" target="_blank" rel="noopener"><span class="l">Instagram 2</span><span class="r">↗</span></a>
+          <a class="btn" href="https://www.facebook.com/share/1GbsF2TjgC/?mibextid=wwXIfr" target="_blank" rel="noopener"><span class="l">Facebook 2</span><span class="r">↗</span></a>
+        </div>
+      </section>
+
+      <!-- 2) أزرار الطلب والأرقام -->
       <section class="section">
         <h2 data-i18n="fast_order_title">🧾 طرق الطلب السريعة</h2>
         <div class="grid">
@@ -111,28 +162,7 @@
         </div>
       </section>
 
-      <!-- الحسابات الأولى -->
-      <section class="section">
-        <h2 data-i18n="acc_primary">📌 الحسابات الأولى</h2>
-        <div class="grid">
-          <a class="btn" href="https://www.tiktok.com/@mallymako?_t=ZS-8yiC2VJjiOW&_r=1" target="_blank" rel="noopener"><span class="l">TikTok</span><span class="r">↗</span></a>
-          <a class="btn" href="https://www.instagram.com/malle_mako?igsh=MTAwZTNmeWd1enhkeA%3D%3D&utm_source=qr" target="_blank" rel="noopener"><span class="l">Instagram</span><span class="r">↗</span></a>
-          <a class="btn" href="https://www.facebook.com/share/19YAf8LGAp/?mibextid=wwXIfr" target="_blank" rel="noopener"><span class="l">Facebook</span><span class="r">↗</span></a>
-          <a class="btn" href="https://t.me/mallimako" target="_blank" rel="noopener"><span class="l" data-i18n="telegram">قناتنا على تليجرام</span><span class="r">↗</span></a>
-        </div>
-      </section>
-
-      <!-- الحسابات الثانية -->
-      <section class="section">
-        <h2 data-i18n="acc_secondary">📌 الحسابات الثانية</h2>
-        <div class="grid">
-          <a class="btn" href="https://www.tiktok.com/@mallymako2?_t=ZS-8yiCEeCD54a&_r=1" target="_blank" rel="noopener"><span class="l">TikTok 2</span><span class="r">↗</span></a>
-          <a class="btn" href="https://www.instagram.com/chaqokanimako?igsh=MXY1aDhmZGZiazhxag%3D%3D&utm_source=qr" target="_blank" rel="noopener"><span class="l">Instagram 2</span><span class="r">↗</span></a>
-          <a class="btn" href="https://www.facebook.com/share/1GbsF2TjgC/?mibextid=wwXIfr" target="_blank" rel="noopener"><span class="l">Facebook 2</span><span class="r">↗</span></a>
-        </div>
-      </section>
-
-      <!-- موقع المتجر -->
+      <!-- 3) الخريطة -->
       <section class="section">
         <h2 data-i18n="map_title">📍 موقع المتجر على الخريطة</h2>
         <div class="grid">
@@ -140,7 +170,6 @@
             <span class="l"><i class="icons">🗺️</i> <span data-i18n="open_in_maps">فتح الموقع في خرائط Google</span></span><span class="r">↗</span>
           </a>
           <div class="map-wrap" aria-label="خريطة المتجر">
-            <!-- نستخدم رابطك القصير ضمن استعلام q + output=embed كحل عام يعمل -->
             <iframe class="map" loading="lazy" allowfullscreen
               src="https://www.google.com/maps?q=https%3A%2F%2Fmaps.app.goo.gl%2FopRr37SBETZs3yWR7%3Fg_st%3Dipc&output=embed">
             </iframe>
@@ -175,22 +204,22 @@
   </script>
 
   <script>
-    // إعداد روابط واتساب حسب اللغة
+    // روابط واتساب (نغيّر الرسالة حسب اللغة)
     const WA1 = "https://wa.me/9647701405137?text=";
     const WA2 = "https://wa.me/9647501405137?text=";
 
-    const M = {
+    const T = {
       ar: {
         dir:"rtl", title:"Mally Mako",
         tagline:"متجر لأدوات التخييم، السكاكين، والمعدات الاحترافية — توصيل لجميع المحافظات.",
+        acc_unique:"📌 حسابات المنتجات الفريدة",
+        acc_knives:"🔪 حسابات متجر السكاكين",
         fast_order_title:"🧾 طرق الطلب السريعة",
         whatsapp_0770:"الطلب عبر واتساب (0770)",
         whatsapp_0750:"الطلب عبر واتساب (0750)",
         direct_call:"اتصال مباشر:",
         call_0770:"اتصال 0770", call_0750:"اتصال 0750",
         copy_number:"نسخ الرقم",
-        acc_primary:"📌 الحسابات الأولى",
-        acc_secondary:"📌 الحسابات الثانية",
         telegram:"قناتنا على تليجرام",
         map_title:"📍 موقع المتجر على الخريطة",
         open_in_maps:"فتح الموقع في خرائط Google",
@@ -201,14 +230,14 @@
       en: {
         dir:"ltr", title:"Mally Mako",
         tagline:"Store for camping gear, knives & pro tools — delivery to all provinces.",
+        acc_unique:"📌 Unique Products Accounts",
+        acc_knives:"🔪 Knife Store Accounts",
         fast_order_title:"🧾 Quick Order Methods",
         whatsapp_0770:"Order via WhatsApp (0770)",
         whatsapp_0750:"Order via WhatsApp (0750)",
         direct_call:"Direct Call:",
         call_0770:"Call 0770", call_0750:"Call 0750",
         copy_number:"Copy Number",
-        acc_primary:"📌 Primary Accounts",
-        acc_secondary:"📌 Secondary Accounts",
         telegram:"Our Telegram Channel",
         map_title:"📍 Store Location on the Map",
         open_in_maps:"Open location in Google Maps",
@@ -218,15 +247,15 @@
       },
       ku: {
         dir:"rtl", title:"Mally Mako",
-        tagline:"فرۆشگای کەرەستەی دیار، کارد و ئامرازە پێشەییەکان — ناردن بۆ هەموو پارێزگاکان.",
+        tagline:"فرۆشگای کەرەستەی دەرهەوا، کارد و ئامرازە پێشەییەکان — ناردن بۆ هەموو پارێزگاکان.",
+        acc_unique:"📌 هەژمارەکانی بەرهەمە یەکتاكان",
+        acc_knives:"🔪 هەژمارەکانی فرۆشگای چەقۆ",
         fast_order_title:"🧾 ڕێگاکانی داواکردنی خێرا",
         whatsapp_0770:"داواکردن لە واتساب (0770)",
         whatsapp_0750:"داواکردن لە واتساب (0750)",
         direct_call:"پەیوەندی ڕاستەوخۆ:",
         call_0770:"پەیوەندی 0770", call_0750:"پەیوەندی 0750",
         copy_number:"کۆپی ژمارە",
-        acc_primary:"📌 هەژمارە سەرەکییەکان",
-        acc_secondary:"📌 هەژمارە دووەمەکان",
         telegram:"کەناڵی تێلەگرامەکەمان",
         map_title:"📍 شوێنی فرۆشگا لەسەر نەخشە",
         open_in_maps:"کردنەوە لە نەخشەی Google",
@@ -238,12 +267,10 @@
 
     const toast = document.getElementById('toast');
     document.addEventListener('click', (e)=>{
-      const btn = e.target.closest('[data-copy]');
-      if(btn){
-        const val = btn.getAttribute('data-copy');
-        navigator.clipboard.writeText(val).then(()=>{
-          showToast(i18n('copied'));
-        });
+      const copyBtn = e.target.closest('[data-copy]');
+      if(copyBtn){
+        const val = copyBtn.getAttribute('data-copy');
+        navigator.clipboard.writeText(val).then(()=> showToast(tr('copied')));
       }
       const langBtn = e.target.closest('[data-lang]');
       if(langBtn){
@@ -258,19 +285,18 @@
       toast.style.display='block';
       setTimeout(()=> toast.style.display='none', 1400);
     }
-
-    function i18n(key){ return M[currentLang][key]; }
+    function tr(key){ return T[current][key]; }
 
     function setLang(lang='ar'){
-      currentLang = (['ar','en','ku'].includes(lang)? lang : 'ar');
-      const cfg = M[currentLang];
+      current = (['ar','en','ku'].includes(lang)? lang : 'ar');
+      const cfg = T[current];
       // نصوص
       document.querySelectorAll('[data-i18n]').forEach(el=>{
         const k = el.getAttribute('data-i18n');
         if(cfg[k]) el.textContent = cfg[k];
       });
       // dir/lang
-      document.documentElement.setAttribute('lang', currentLang);
+      document.documentElement.setAttribute('lang', current);
       document.documentElement.setAttribute('dir', cfg.dir);
       // واتساب حسب اللغة
       const enc = encodeURIComponent(cfg.wa_msg);
@@ -278,8 +304,11 @@
       document.getElementById('wa2').setAttribute('href', WA2 + enc);
     }
 
-    let currentLang = 'ar';
+    let current = 'ar';
     setLang('ar');
   </script>
+
+  <!-- Toast عنصر -->
+  <div id="toast" class="copy-toast">تم نسخ الرقم ✅</div>
 </body>
 </html>
