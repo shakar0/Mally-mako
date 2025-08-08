@@ -4,68 +4,181 @@
 <meta charset="utf-8" />
 <meta name="viewport" content="width=device-width,initial-scale=1" />
 <title>Mally Mako - روابط المتجر</title>
+<meta name="description" content="متجر لأدوات التخييم، السكاكين، والمعدات الاحترافية مع توصيل لجميع المحافظات. وسائل الطلب والحسابات الرسمية.">
+<meta name="theme-color" content="#0f1220">
+
+<!-- Open Graph -->
+<meta property="og:title" content="Mally Mako - روابط المتجر">
+<meta property="og:description" content="كل روابط الطلب والتواصل والحسابات الرسمية في مكان واحد.">
+<meta property="og:type" content="website">
+
 <style>
-  :root { --bg:#0f1220; --card:#171a2b; --text:#f2f4ff; --muted:#aab1d0; --accent:#6aa6ff; }
-  * { box-sizing:border-box; }
-  body { margin:0; font-family: system-ui, -apple-system, "Segoe UI", Tahoma, Arial; background:linear-gradient(160deg,#0e1224,#0b0f1c); color:var(--text); }
-  .wrap { max-width:680px; margin:0 auto; padding:32px 18px 60px; }
-  .card { background:var(--card); border:1px solid #242946; border-radius:18px; padding:22px; box-shadow:0 10px 30px rgba(0,0,0,.25); }
-  .brand { display:flex; align-items:center; gap:14px; margin-bottom:10px; }
-  .logo { width:56px; height:56px; border-radius:14px; background:#12d6b5; display:flex; align-items:center; justify-content:center; font-weight:800; color:#052; }
-  h1 { margin:0; font-size:24px; }
-  p.desc { margin:8px 0 18px; color:var(--muted); line-height:1.7; }
-  .section-title { margin-top:20px; font-weight:700; color:var(--accent); }
-  .btns { display:grid; gap:12px; margin-top:10px; }
-  a.btn {
-    display:flex; align-items:center; justify-content:space-between;
-    padding:14px 16px; background:#0f1330; border:1px solid #25305d;
-    color:var(--text); text-decoration:none; border-radius:12px; transition:.2s;
+  :root{
+    --bg:#0f1220; --card:#171a2b; --text:#f2f4ff; --muted:#aab1d0; --accent:#6aa6ff; --line:#242946; --ok:#12d6b5;
   }
-  a.btn:hover { transform:translateY(-2px); border-color:var(--accent); }
-  .btn span{ font-weight:600; }
-  .note { margin-top:16px; color:var(--muted); font-size:12.5px; }
-  .footer { text-align:center; margin-top:22px; color:#8e95b8; font-size:12.5px; }
+  @media (prefers-color-scheme: light){
+    :root{ --bg:#f7f8ff; --card:#ffffff; --text:#0f1220; --muted:#556; --accent:#2a5cff; --line:#e6e9f4; --ok:#06b092; }
+  }
+  *{ box-sizing:border-box }
+  body{ margin:0; font-family: system-ui,-apple-system,"Segoe UI",Tahoma,Arial; background:linear-gradient(160deg, var(--bg), #0b0f1c); color:var(--text) }
+  .wrap{ max-width:760px; margin:0 auto; padding:28px 16px 60px }
+  .card{ background:var(--card); border:1px solid var(--line); border-radius:18px; padding:22px; box-shadow:0 10px 30px rgba(0,0,0,.22) }
+  header.brand{ display:flex; align-items:center; gap:14px; margin-bottom:8px }
+  .logo{ width:58px; height:58px; border-radius:14px; background:var(--ok); display:flex; align-items:center; justify-content:center; font-weight:800; color:#052; }
+  h1{ margin:0; font-size:26px }
+  p.desc{ margin:6px 0 16px; color:var(--muted); line-height:1.7 }
+  .grid{ display:grid; gap:12px }
+  .section{ margin-top:18px }
+  .section h2{ margin:8px 0; font-size:16px; color:var(--accent) }
+  a.btn, .btn{
+    display:flex; align-items:center; justify-content:space-between; gap:12px;
+    padding:14px 16px; background:#0f1330; border:1px solid #25305d; color:var(--text);
+    text-decoration:none; border-radius:12px; transition:.2s; cursor:pointer;
+  }
+  a.btn:hover, .btn:hover{ transform:translateY(-2px); border-color:var(--accent) }
+  .btn .l{ display:flex; align-items:center; gap:10px; font-weight:600 }
+  .btn .r{ opacity:.85 }
+  .pill{ font-size:12px; padding:4px 8px; background:#11173d; border:1px solid #2a356a; border-radius:999px; color:var(--muted) }
+  .contact-card{
+    display:grid; gap:10px; background:rgba(255,255,255,.02); border:1px dashed var(--line);
+    padding:12px; border-radius:12px;
+  }
+  .contact-row{ display:flex; gap:8px; flex-wrap:wrap; align-items:center; justify-content:space-between }
+  .phone{
+    display:flex; gap:8px; align-items:center; padding:10px 12px; border:1px solid var(--line);
+    border-radius:10px; background:rgba(255,255,255,.02); min-width:260px; flex:1;
+  }
+  .phone b{ direction:ltr }
+  .actions{ display:flex; gap:8px; flex-wrap:wrap }
+  .map-wrap{ margin-top:10px; border:1px solid var(--line); border-radius:12px; overflow:hidden }
+  iframe.map{ width:100%; height:280px; border:0 }
+  .note{ margin-top:14px; color:var(--muted); font-size:12.8px }
+  .footer{ text-align:center; margin-top:22px; color:#8e95b8; font-size:12.5px }
+  .copy-toast{
+    position:fixed; inset-inline:0; bottom:16px; margin:auto; background:var(--ok); color:#052;
+    width:max-content; padding:10px 14px; border-radius:999px; box-shadow:0 8px 24px rgba(0,0,0,.25); display:none; font-weight:700;
+  }
+  .icons{font-style:normal}
 </style>
 </head>
 <body>
   <div class="wrap">
     <div class="card">
-      <div class="brand">
+      <header class="brand">
         <div class="logo">MM</div>
         <div>
           <h1>Mally Mako</h1>
-          <div class="note">متجر لأدوات التخييم، السكاكين، والمعدات الاحترافية مع توصيل لجميع المحافظات.</div>
+          <p class="desc">متجر لأدوات التخييم، السكاكين، والمعدات الاحترافية — توصيل لجميع المحافظات.</p>
         </div>
-      </div>
+      </header>
 
-      <!-- واتساب وتلجرام -->
-      <div class="btns">
-        <a class="btn" href="https://wa.me/9647701405137?text=السلام%20عليكم%20أريد%20طلب%20منتج" target="_blank"><span>الطلب عبر واتساب (0770)</span> <span>↗</span></a>
-        <a class="btn" href="https://wa.me/9647501405137?text=السلام%20عليكم%20أريد%20طلب%20منتج" target="_blank"><span>الطلب عبر واتساب (0750)</span> <span>↗</span></a>
-        <a class="btn" href="tel:+9647701405137"><span>اتصال مباشر (0770)</span> <span>📞</span></a>
-        <a class="btn" href="tel:+9647501405137"><span>اتصال مباشر (0750)</span> <span>📞</span></a>
-        <a class="btn" href="https://t.me/mallimako" target="_blank"><span>قناتنا على تليجرام</span> <span>↗</span></a>
-        <a class="btn" href="https://maps.app.goo.gl/YVuLMxFNpJYsXYjx9?g_st=ipc" target="_blank"><span>موقع المتجر على الخريطة</span> <span>📍</span></a>
-      </div>
+      <!-- طرق الطلب والتواصل -->
+      <section class="section">
+        <h2>🧾 طرق الطلب السريعة</h2>
+        <div class="grid">
+          <a class="btn" href="https://wa.me/9647701405137?text=%D8%A7%D9%84%D8%B3%D9%84%D8%A7%D9%85%20%D8%B9%D9%84%D9%8A%D9%83%D9%85%20%D8%A3%D8%B1%D9%8A%D8%AF%20%D8%B7%D9%84%D8%A8%20%D9%85%D9%86%D8%AA%D8%AC" target="_blank" rel="noopener">
+            <span class="l"><i class="icons">💬</i> الطلب عبر واتساب (0770)</span><span class="r">↗</span>
+          </a>
+          <a class="btn" href="https://wa.me/9647501405137?text=%D8%A7%D9%84%D8%B3%D9%84%D8%A7%D9%85%20%D8%B9%D9%84%D9%8A%D9%83%D9%85%20%D8%A3%D8%B1%D9%8A%D8%AF%20%D8%B7%D9%84%D8%A8%20%D9%85%D9%86%D8%AA%D8%AC" target="_blank" rel="noopener">
+            <span class="l"><i class="icons">💬</i> الطلب عبر واتساب (0750)</span><span class="r">↗</span>
+          </a>
+          <div class="contact-card" aria-label="أرقام الهاتف">
+            <div class="contact-row">
+              <div class="phone"><i class="icons">📞</i> <span>اتصال مباشر:</span> <b>+964 770 140 5137</b></div>
+              <div class="actions">
+                <a class="btn pill" href="tel:+9647701405137"><i class="icons">📲</i> اتصال 0770</a>
+                <button class="btn pill" data-copy="+9647701405137" type="button">نسخ الرقم</button>
+              </div>
+            </div>
+            <div class="contact-row">
+              <div class="phone"><i class="icons">📞</i> <span>اتصال مباشر:</span> <b>+964 750 140 5137</b></div>
+              <div class="actions">
+                <a class="btn pill" href="tel:+9647501405137"><i class="icons">📲</i> اتصال 0750</a>
+                <button class="btn pill" data-copy="+9647501405137" type="button">نسخ الرقم</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
 
-      <!-- الحسابات الأولى -->
-      <div class="section-title">📌 الحسابات الأولى</div>
-      <div class="btns">
-        <a class="btn" href="https://www.tiktok.com/@mallymako?_t=ZS-8yiC2VJjiOW&_r=1" target="_blank"><span>TikTok الأول</span> <span>↗</span></a>
-        <a class="btn" href="https://www.instagram.com/malle_mako?igsh=MTAwZTNmeWd1enhkeA%3D%3D&utm_source=qr" target="_blank"><span>إنستغرام الأول</span> <span>↗</span></a>
-        <a class="btn" href="https://www.facebook.com/share/19YAf8LGAp/?mibextid=wwXIfr" target="_blank"><span>فيسبوك الأول</span> <span>↗</span></a>
-      </div>
+      <!-- حساباتنا الرسمية الأولى -->
+      <section class="section">
+        <h2>📌 الحسابات الأولى</h2>
+        <div class="grid">
+          <a class="btn" href="https://www.tiktok.com/@mallymako?_t=ZS-8yiC2VJjiOW&_r=1" target="_blank" rel="noopener"><span class="l">TikTok الأول</span><span class="r">↗</span></a>
+          <a class="btn" href="https://www.instagram.com/malle_mako?igsh=MTAwZTNmeWd1enhkeA%3D%3D&utm_source=qr" target="_blank" rel="noopener"><span class="l">إنستغرام الأول</span><span class="r">↗</span></a>
+          <a class="btn" href="https://www.facebook.com/share/19YAf8LGAp/?mibextid=wwXIfr" target="_blank" rel="noopener"><span class="l">فيسبوك الأول</span><span class="r">↗</span></a>
+          <a class="btn" href="https://t.me/mallimako" target="_blank" rel="noopener"><span class="l">قناتنا على تليجرام</span><span class="r">↗</span></a>
+        </div>
+      </section>
 
       <!-- الحسابات الثانية -->
-      <div class="section-title">📌 الحسابات الثانية</div>
-      <div class="btns">
-        <a class="btn" href="https://www.tiktok.com/@mallymako2?_t=ZS-8yiCEeCD54a&_r=1" target="_blank"><span>TikTok الثاني</span> <span>↗</span></a>
-        <a class="btn" href="https://www.instagram.com/chaqokanimako?igsh=MXY1aDhmZGZiazhxag%3D%3D&utm_source=qr" target="_blank"><span>إنستغرام الثاني</span> <span>↗</span></a>
-        <a class="btn" href="https://www.facebook.com/share/1GbsF2TjgC/?mibextid=wwXIfr" target="_blank"><span>فيسبوك الثاني</span> <span>↗</span></a>
-      </div>
+      <section class="section">
+        <h2>📌 الحسابات الثانية</h2>
+        <div class="grid">
+          <a class="btn" href="https://www.tiktok.com/@mallymako2?_t=ZS-8yiCEeCD54a&_r=1" target="_blank" rel="noopener"><span class="l">TikTok الثاني</span><span class="r">↗</span></a>
+          <a class="btn" href="https://www.instagram.com/chaqokanimako?igsh=MXY1aDhmZGZiazhxag%3D%3D&utm_source=qr" target="_blank" rel="noopener"><span class="l">إنستغرام الثاني</span><span class="r">↗</span></a>
+          <a class="btn" href="https://www.facebook.com/share/1GbsF2TjgC/?mibextid=wwXIfr" target="_blank" rel="noopener"><span class="l">فيسبوك الثاني</span><span class="r">↗</span></a>
+        </div>
+      </section>
+
+      <!-- موقع المتجر -->
+      <section class="section">
+        <h2>📍 موقع المتجر على الخريطة</h2>
+        <div class="grid">
+          <a class="btn" href="https://maps.app.goo.gl/YVuLMxFNpJYsXYjx9?g_st=ipc" target="_blank" rel="noopener">
+            <span class="l"><i class="icons">🗺️</i> فتح الموقع في خرائط Google</span><span class="r">↗</span>
+          </a>
+          <div class="map-wrap" aria-label="خريطة المتجر">
+            <!-- للحصول على Embed صحيح: افتح نفس رابط الخريطة > مشاركة > تضمين خريطة > انسخ src -->
+            <iframe class="map" loading="lazy" allowfullscreen
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d..."> <!-- ضع كود التضمين الحقيقي هنا -->
+            </iframe>
+          </div>
+          <div class="note">إذا لم تظهر الخريطة، افتح الرابط أعلاه مباشرة من تطبيق الخرائط على هاتفك.</div>
+        </div>
+      </section>
 
     </div>
-    <div class="footer">© Mally Mako</div>
+    <div class="footer">© Mally Mako — جميع الحقوق محفوظة</div>
   </div>
+
+  <!-- Toast نسخ -->
+  <div id="toast" class="copy-toast">تم نسخ الرقم ✅</div>
+
+  <!-- JSON-LD: LocalBusiness -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Store",
+    "name": "Mally Mako",
+    "description": "متجر لأدوات التخييم، السكاكين، والمعدات الاحترافية مع توصيل لجميع المحافظات.",
+    "telephone": ["+9647701405137", "+9647501405137"],
+    "url": "https://example.com",
+    "address": {
+      "@type": "PostalAddress",
+      "addressCountry": "IQ"
+    },
+    "sameAs": [
+      "https://www.tiktok.com/@mallymako",
+      "https://www.instagram.com/malle_mako",
+      "https://www.facebook.com/"
+    ]
+  }
+  </script>
+
+  <script>
+    // نسخ الرقم + Toast
+    const toast = document.getElementById('toast');
+    document.addEventListener('click', (e)=>{
+      const btn = e.target.closest('[data-copy]');
+      if(!btn) return;
+      const val = btn.getAttribute('data-copy');
+      navigator.clipboard.writeText(val).then(()=>{
+        toast.style.display='block';
+        setTimeout(()=> toast.style.display='none', 1400);
+      });
+    });
+  </script>
 </body>
 </html>
