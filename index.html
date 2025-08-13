@@ -37,7 +37,7 @@
   <link rel="preconnect" href="https://maps.googleapis.com">
   <link rel="preconnect" href="https://maps.gstatic.com" crossorigin>
 
-  <!-- CSP: السماح لسكربت GA + خرائط + إنلاين للّغة -->
+  <!-- CSP -->
   <meta http-equiv="Content-Security-Policy"
         content="default-src 'self'; img-src 'self' https: data:; script-src 'self' 'unsafe-inline' https://www.google.com https://maps.googleapis.com https://www.googletagmanager.com; style-src 'self' 'unsafe-inline'; frame-src https://www.google.com; connect-src 'self' https://www.google-analytics.com https://region1.google-analytics.com; object-src 'none'; base-uri 'self';">
   <meta name="referrer" content="strict-origin-when-cross-origin">
@@ -74,6 +74,7 @@
     a.btn:hover, .btn:hover{ transform:translateY(-2px); border-color:var(--brand) }
     a.btn:focus-visible, .btn:focus-visible{ outline:3px solid var(--brand); outline-offset:3px }
     .btn .l{ display:flex; align-items:center; gap:10px; font-weight:600 }
+    .btn .l svg{ width:18px; height:18px; }
     .btn .r{ opacity:.85 }
 
     .contact-card{ display:grid; gap:12px; background:rgba(255,255,255,.02); border:1px dashed var(--line); padding:14px; border-radius:12px; }
@@ -106,33 +107,89 @@
           <div class="langbar" role="tablist" aria-label="Language switch">
             <button data-lang="ku" class="active" aria-selected="true">کوردی</button>
             <button data-lang="ar" aria-selected="false">العربية</button>
-            <button data-lang="en" aria-selected="false">English</button>
           </div>
         </div>
       </header>
 
-      <!-- الحسابات -->
+      <!-- الحسابات: بابات مميّزة -->
       <section class="section">
         <h2 id="t-acc-unique">📌 بابەتە جیاواز و شاخەوانیەکان</h2>
         <div class="grid">
-          <a class="btn" data-social="tiktok1" href="https://www.tiktok.com/@mallymako?utm_source=linkinbio&utm_medium=website&utm_campaign=mako" target="_blank" rel="noopener" aria-label="TikTok"><span class="l">TikTok</span><span class="r">↗</span></a>
-          <a class="btn" data-social="instagram1" href="https://www.instagram.com/malle_mako?utm_source=linkinbio&utm_medium=website&utm_campaign=mako" target="_blank" rel="noopener" aria-label="Instagram"><span class="l">Instagram</span><span class="r">↗</span></a>
-          <a class="btn" data-social="facebook1" href="https://www.facebook.com/share/19YAf8LGAp/?mibextid=wwXIfr&utm_source=linkinbio&utm_medium=website&utm_campaign=mako" target="_blank" rel="noopener" aria-label="Facebook"><span class="l">Facebook</span><span class="r">↗</span></a>
-          <!-- Threads #1 (بابات مميزة) -->
-          <a class="btn" data-social="threads1" href="https://www.threads.com/@malle_mako?igshid=NTc4MTIwNjQ2YQ==" target="_blank" rel="noopener" aria-label="Threads"><span class="l">Threads</span><span class="r">↗</span></a>
-          <!-- Telegram (نص إنجليزي في كل اللغات) -->
-          <a class="btn" data-social="telegram" href="https://t.me/mallimako?utm_source=linkinbio&utm_medium=website&utm_campaign=mako" target="_blank" rel="noopener" aria-label="Telegram"><span class="l" id="t-telegram">Telegram Channel</span><span class="r">↗</span></a>
+          <a class="btn" data-social="tiktok1" href="https://www.tiktok.com/@mallymako?utm_source=linkinbio&utm_medium=website&utm_campaign=mako" target="_blank" rel="noopener" aria-label="TikTok">
+            <span class="l">
+              <!-- TikTok Icon -->
+              <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M16.5 3c.6 2.1 2.2 3.7 4.1 4.3v3.1c-1.7-.1-3.3-.6-4.7-1.5v6.6c0 4.2-2.9 7-6.8 7-3.6 0-6.7-2.9-6.7-6.6 0-3.6 2.8-6.5 6.4-6.6v3.5c-1.7.1-3 1.5-3 3.1 0 1.7 1.4 3.1 3.2 3.1 2 0 3.3-1.5 3.3-3.7V3h4.2z"/></svg>
+              <span id="t-tiktok1">تیك‌تۆك</span>
+            </span><span class="r">↗</span>
+          </a>
+          <a class="btn" data-social="instagram1" href="https://www.instagram.com/malle_mako?utm_source=linkinbio&utm_medium=website&utm_campaign=mako" target="_blank" rel="noopener" aria-label="Instagram">
+            <span class="l">
+              <!-- Instagram Icon -->
+              <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M7 2h10a5 5 0 015 5v10a5 5 0 01-5 5H7a5 5 0 01-5-5V7a5 5 0 015-5zm0 2a3 3 0 00-3 3v10a3 3 0 003 3h10a3 3 0 003-3V7a3 3 0 00-3-3H7zm5 3.5A5.5 5.5 0 1112 19a5.5 5.5 0 010-11.5zm0 2A3.5 3.5 0 1015.5 13 3.5 3.5 0 0012 9.5zM18 6.2a1.2 1.2 0 11-1.2 1.2A1.2 1.2 0 0118 6.2z"/></svg>
+              <span id="t-instagram1">ئینستاگرام</span>
+            </span><span class="r">↗</span>
+          </a>
+          <a class="btn" data-social="facebook1" href="https://www.facebook.com/share/19YAf8LGAp/?mibextid=wwXIfr&utm_source=linkinbio&utm_medium=website&utm_campaign=mako" target="_blank" rel="noopener" aria-label="Facebook">
+            <span class="l">
+              <!-- Facebook Icon -->
+              <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M13 22v-8h3l.6-4H13V7.3c0-1.1.3-1.8 1.9-1.8H17V2.1c-.3 0-1.4-.1-2.6-.1-2.6 0-4.4 1.6-4.4 4.6V10H7v4h3v8h3z"/></svg>
+              <span id="t-facebook1">فەیسبوك</span>
+            </span><span class="r">↗</span>
+          </a>
+          <!-- Threads #1 -->
+          <a class="btn" data-social="threads1" href="https://www.threads.com/@malle_mako?igshid=NTc4MTIwNjQ2YQ==" target="_blank" rel="noopener" aria-label="Threads">
+            <span class="l">
+              <!-- Threads Icon (at symbol style) -->
+              <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2C6.5 2 2 6.3 2 12s4.5 10 10 10c5.9 0 10-4.4 10-10S17.9 2 12 2zm3.8 12.6c-.5 2.5-2.3 4.1-4.8 4.1-2.8 0-5-2.2-5-4.9s2.2-4.9 5-4.9c1.6 0 3 .7 3.8 1.8.4.5.6 1 .7 1.6l-2 .3c-.1-.7-.8-1.8-2.5-1.8-1.6 0-2.8 1.2-2.8 3s1.2 3 2.9 3c1.3 0 2.1-.6 2.5-1.7H10v-1.8h5.9c.1.8.1 1.5-.1 2.3z"/></svg>
+              <span>Threads</span>
+            </span><span class="r">↗</span>
+          </a>
         </div>
       </section>
 
+      <!-- الحسابات: قسم السكاكين -->
       <section class="section">
         <h2 id="t-acc-knives">🔪 هەژمارەکانی بەشی چەقۆکان</h2>
         <div class="grid">
-          <a class="btn" data-social="tiktok2" href="https://www.tiktok.com/@mallymako2?utm_source=linkinbio&utm_medium=website&utm_campaign=mako" target="_blank" rel="noopener"><span class="l">TikTok 2</span><span class="r">↗</span></a>
-          <a class="btn" data-social="instagram2" href="https://www.instagram.com/chaqokanimako?utm_source=linkinbio&utm_medium=website&utm_campaign=mako" target="_blank" rel="noopener"><span class="l">Instagram 2</span><span class="r">↗</span></a>
-          <a class="btn" data-social="facebook2" href="https://www.facebook.com/share/1GbsF2TjgC/?mibextid=wwXIfr&utm_source=linkinbio&utm_medium=website&utm_campaign=mako" target="_blank" rel="noopener"><span class="l">Facebook 2</span><span class="r">↗</span></a>
-          <!-- Threads #2 (قسم السكاكين) -->
-          <a class="btn" data-social="threads2" href="https://www.threads.com/@chaqokanimako?igshid=NTc4MTIwNjQ2YQ==" target="_blank" rel="noopener" aria-label="Threads"><span class="l">Threads 2</span><span class="r">↗</span></a>
+          <a class="btn" data-social="tiktok2" href="https://www.tiktok.com/@mallymako2?utm_source=linkinbio&utm_medium=website&utm_campaign=mako" target="_blank" rel="noopener">
+            <span class="l">
+              <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M16.5 3c.6 2.1 2.2 3.7 4.1 4.3v3.1c-1.7-.1-3.3-.6-4.7-1.5v6.6c0 4.2-2.9 7-6.8 7-3.6 0-6.7-2.9-6.7-6.6 0-3.6 2.8-6.5 6.4-6.6v3.5c-1.7.1-3 1.5-3 3.1 0 1.7 1.4 3.1 3.2 3.1 2 0 3.3-1.5 3.3-3.7V3h4.2z"/></svg>
+              <span id="t-tiktok2">تیك‌تۆك 2</span>
+            </span><span class="r">↗</span>
+          </a>
+          <a class="btn" data-social="instagram2" href="https://www.instagram.com/chaqokanimako?utm_source=linkinbio&utm_medium=website&utm_campaign=mako" target="_blank" rel="noopener">
+            <span class="l">
+              <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M7 2h10a5 5 0 015 5v10a5 5 0 01-5 5H7a5 5 0 01-5-5V7a5 5 0 015-5zm0 2a3 3 0 00-3 3v10a3 3 0 003 3h10a3 3 0 003-3V7a3 3 0 00-3-3H7zm5 3.5A5.5 5.5 0 1112 19a5.5 5.5 0 010-11.5zm0 2A3.5 3.5 0 1015.5 13 3.5 3.5 0 0012 9.5zM18 6.2a1.2 1.2 0 11-1.2 1.2A1.2 1.2 0 0118 6.2z"/></svg>
+              <span id="t-instagram2">ئینستاگرام 2</span>
+            </span><span class="r">↗</span>
+          </a>
+          <a class="btn" data-social="facebook2" href="https://www.facebook.com/share/1GbsF2TjgC/?mibextid=wwXIfr&utm_source=linkinbio&utm_medium=website&utm_campaign=mako" target="_blank" rel="noopener">
+            <span class="l">
+              <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M13 22v-8h3l.6-4H13V7.3c0-1.1.3-1.8 1.9-1.8H17V2.1c-.3 0-1.4-.1-2.6-.1-2.6 0-4.4 1.6-4.4 4.6V10H7v4h3v8h3z"/></svg>
+              <span id="t-facebook2">فەیسبوك 2</span>
+            </span><span class="r">↗</span>
+          </a>
+          <!-- Threads #2 -->
+          <a class="btn" data-social="threads2" href="https://www.threads.com/@chaqokanimako?igshid=NTc4MTIwNjQ2YQ==" target="_blank" rel="noopener" aria-label="Threads">
+            <span class="l">
+              <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2C6.5 2 2 6.3 2 12s4.5 10 10 10c5.9 0 10-4.4 10-10S17.9 2 12 2zm3.8 12.6c-.5 2.5-2.3 4.1-4.8 4.1-2.8 0-5-2.2-5-4.9s2.2-4.9 5-4.9c1.6 0 3 .7 3.8 1.8.4.5.6 1 .7 1.6l-2 .3c-.1-.7-.8-1.8-2.5-1.8-1.6 0-2.8 1.2-2.8 3s1.2 3 2.9 3c1.3 0 2.1-.6 2.5-1.7H10v-1.8h5.9c.1.8.1 1.5-.1 2.3z"/></svg>
+              <span>Threads 2</span>
+            </span><span class="r">↗</span>
+          </a>
+        </div>
+      </section>
+
+      <!-- قسم تليجرام المستقل -->
+      <section class="section">
+        <h2>📢 Telegram</h2>
+        <div class="grid">
+          <a class="btn" data-social="telegram" href="https://t.me/mallimako?utm_source=linkinbio&utm_medium=website&utm_campaign=mako" target="_blank" rel="noopener" aria-label="Telegram">
+            <span class="l">
+              <!-- Telegram Icon -->
+              <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M9.6 15.6l-.4 5.6c.6 0 .8-.2 1.1-.5l2.6-2.5 5.4 4c1 .6 1.7.3 2-.9l3.6-16.9v0c.4-1.6-.6-2.2-1.6-1.8L1.7 9.8C.2 10.4.3 11.2 1.6 11.6l5.6 1.7L19.2 6c.7-.5 1.3-.2.8.3l-10 9.3z"/></svg>
+              <span>Telegram Channel</span>
+            </span><span class="r">↗</span>
+          </a>
         </div>
       </section>
 
@@ -223,7 +280,7 @@
   </script>
 
   <script>
-    /* ===================== اللغات ===================== */
+    /* ===================== اللغات (كردي/عربي فقط) ===================== */
     const T = {
       ku: {
         dir:"rtl",
@@ -238,7 +295,6 @@
         direct_call:"پەیوەندی ڕاستەوخۆ:",
         call_0770:"پەیوەندی 0770", call_0750:"پەیوەندی 0750",
         copy:"کۆپی ژمارە",
-        telegram:"Telegram Channel",
         address_title:"📍 ناونیشان",
         addr1:"سلێمانی - ناوبازاڕ - پشت بازاڕی جەوازەکە",
         addr2:"بازاڕی حاجی حەمە سور - نهۆمی ژێرزەمین - دوکانی ژمارە ٤٦",
@@ -246,7 +302,10 @@
         open_in_maps:"کردنەوە لە نەخشەی Google",
         map_note:"لەڕێی بەستەرەکەی سەرەوە ناونیشانەکە بکەرەوە",
         copied:"ژمارەکە کۆپی کرا ✅",
-        wa_msg:"سڵاو، دەمەوێت بەرهەمێك فەرمان بكەم"
+        wa_msg:"سڵاو، دەمەوێت بەرهەمێك فەرمان بكەم",
+        // أسماء السوشيال بالكردي
+        tiktok:"تیك‌تۆك", instagram:"ئینستاگرام", facebook:"فەیسبوك",
+        tiktok2:"تیك‌تۆك 2", instagram2:"ئینستاگرام 2", facebook2:"فەیسبوك 2"
       },
       ar: {
         dir:"rtl",
@@ -261,7 +320,6 @@
         direct_call:"اتصال مباشر:",
         call_0770:"اتصال 0770", call_0750:"اتصال 0750",
         copy:"نسخ الرقم",
-        telegram:"Telegram Channel",
         address_title:"📍 العنوان",
         addr1:"السليمانية - السوق - خلف سوق الجوازات",
         addr2:"سوق حاجي حمه سور - الطابق السفلي - محل رقم ٤٦",
@@ -269,30 +327,10 @@
         open_in_maps:"فتح الموقع في خرائط Google",
         map_note:"من خلال الرابط أعلاه افتح العنوان.",
         copied:"تم نسخ الرقم ✅",
-        wa_msg:"السلام عليكم، أود طلب منتج"
-      },
-      en: {
-        dir:"ltr",
-        footer:"© Mally Mako — All rights reserved",
-        title:"Mally Mako",
-        tagline:"All kinds of unique & mountain-style items",
-        acc_unique:"📌 Unique & Mountain Items",
-        acc_knives:"🔪 Knife Store Accounts",
-        fast_order:"🧾 Quick Order Methods",
-        whatsapp_0770:"Order via WhatsApp (0770)",
-        whatsapp_0750:"Order via WhatsApp (0750)",
-        direct_call:"Direct Call:",
-        call_0770:"Call 0770", call_0750:"Call 0750",
-        copy:"Copy Number",
-        telegram:"Telegram Channel",
-        address_title:"📍 Address",
-        addr1:"Sulaimaniyah - Naw Bazaar - Behind the Passport Bazaar",
-        addr2:"Haji Hama Sur Bazaar - Basement Floor - Shop No. 46",
-        map_title:"🗺️ Map",
-        open_in_maps:"Open in Google Maps",
-        map_note:"Open the address via the link above.",
-        copied:"Number copied ✅",
-        wa_msg:"Hello, I’d like to order a product"
+        wa_msg:"السلام عليكم، أود طلب منتج",
+        // أسماء السوشيال بالعربي
+        tiktok:"تيك توك", instagram:"إنستغرام", facebook:"فيسبوك",
+        tiktok2:"تيك توك 2", instagram2:"إنستغرام 2", facebook2:"فيسبوك 2"
       }
     };
 
@@ -317,7 +355,14 @@
       openMaps: document.getElementById('t-open-maps'),
       mapNote: document.getElementById('t-map-note'),
       footer: document.getElementById('t-footer'),
-      toast: document.getElementById('toast')
+      toast: document.getElementById('toast'),
+      // أسماء السوشيال القابلة للتغيير
+      tiktok1: document.getElementById('t-tiktok1'),
+      instagram1: document.getElementById('t-instagram1'),
+      facebook1: document.getElementById('t-facebook1'),
+      tiktok2: document.getElementById('t-tiktok2'),
+      instagram2: document.getElementById('t-instagram2'),
+      facebook2: document.getElementById('t-facebook2')
     };
 
     function applyLang(lang='ku'){
@@ -332,8 +377,8 @@
       el.wa0750.textContent = cfg.whatsapp_0750;
       el.direct1.textContent = cfg.direct_call;
       el.direct2.textContent = cfg.direct_call;
-      el.call0770.textContent = (lang==='en'?'📲 ':'') + cfg.call_0770;
-      el.call0750.textContent = (lang==='en'?'📲 ':'') + cfg.call_0750;
+      el.call0770.textContent = cfg.call_0770;
+      el.call0750.textContent = cfg.call_0750;
       el.copy1.textContent = cfg.copy;
       el.copy2.textContent = cfg.copy;
       el.addressTitle.textContent = cfg.address_title;
@@ -345,24 +390,32 @@
       el.footer.textContent = cfg.footer;
       el.toast.textContent = cfg.copied;
 
+      // تبديل أسماء السوشيال حسب اللغة (عدا Telegram / Threads ثابتة)
+      if(el.tiktok1) el.tiktok1.textContent = cfg.tiktok;
+      if(el.instagram1) el.instagram1.textContent = cfg.instagram;
+      if(el.facebook1) el.facebook1.textContent = cfg.facebook;
+      if(el.tiktok2) el.tiktok2.textContent = cfg.tiktok2;
+      if(el.instagram2) el.instagram2.textContent = cfg.instagram2;
+      if(el.facebook2) el.facebook2.textContent = cfg.facebook2;
+
+      // إعداد اتجاه/لغة الصفحة
       document.documentElement.setAttribute('lang', lang);
       document.documentElement.setAttribute('dir', cfg.dir);
 
+      // روابط واتساب حسب اللغة
       const msg = encodeURIComponent(cfg.wa_msg);
       document.getElementById('wa1').setAttribute('href', "https://wa.me/9647701405137?text=" + msg);
       document.getElementById('wa2').setAttribute('href', "https://wa.me/9647501405137?text=" + msg);
 
+      // حالة أزرار اللغة
       document.querySelectorAll('.langbar button').forEach(b=>{
         const on = b.getAttribute('data-lang') === lang;
         b.classList.toggle('active', on);
         b.setAttribute('aria-selected', on ? 'true' : 'false');
       });
 
+      // حفظ الاختيار
       localStorage.setItem('mako_lang', lang);
-
-      // تأكيد تسمية التليجرام إنجليزية في جميع اللغات
-      const telegramEl = document.getElementById('t-telegram');
-      if (telegramEl) telegramEl.textContent = "Telegram Channel";
     }
 
     function showToast(t){ el.toast.textContent = t; el.toast.style.display='block'; setTimeout(()=> el.toast.style.display='none', 1400); }
@@ -373,7 +426,6 @@
       if(btn){
         navigator.clipboard.writeText(btn.getAttribute('data-copy'))
           .then(()=> showToast(el.toast.textContent));
-        // GA: copy number
         if(window.gtag){ gtag('event','copy_number',{value:1, number: btn.getAttribute('data-copy')}); }
       }
       const langBtn = e.target.closest('[data-lang]');
@@ -417,18 +469,9 @@
       const a = e.target.closest('a');
       if(!a) return;
       const href = a.getAttribute('href') || '';
-      // واتساب
-      if(a.hasAttribute('data-wa') || href.includes('wa.me')){
-        trackWhatsApp(a);
-      }
-      // اتصال
-      if(a.hasAttribute('data-call') || href.startsWith('tel:')){
-        trackCall(a);
-      }
-      // روابط سوشيال/خارجية
-      if(a.hasAttribute('data-social') || href.startsWith('http')){
-        trackOutbound(a);
-      }
+      if(a.hasAttribute('data-wa') || href.includes('wa.me')){ trackWhatsApp(a); }
+      if(a.hasAttribute('data-call') || href.startsWith('tel:')){ trackCall(a); }
+      if(a.hasAttribute('data-social') || href.startsWith('http')){ trackOutbound(a); }
     });
 
     // ابدأ باللغة المحفوظة أو الكردية
