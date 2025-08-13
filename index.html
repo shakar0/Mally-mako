@@ -118,7 +118,10 @@
           <a class="btn" data-social="tiktok1" href="https://www.tiktok.com/@mallymako?utm_source=linkinbio&utm_medium=website&utm_campaign=mako" target="_blank" rel="noopener" aria-label="TikTok"><span class="l">TikTok</span><span class="r">↗</span></a>
           <a class="btn" data-social="instagram1" href="https://www.instagram.com/malle_mako?utm_source=linkinbio&utm_medium=website&utm_campaign=mako" target="_blank" rel="noopener" aria-label="Instagram"><span class="l">Instagram</span><span class="r">↗</span></a>
           <a class="btn" data-social="facebook1" href="https://www.facebook.com/share/19YAf8LGAp/?mibextid=wwXIfr&utm_source=linkinbio&utm_medium=website&utm_campaign=mako" target="_blank" rel="noopener" aria-label="Facebook"><span class="l">Facebook</span><span class="r">↗</span></a>
-          <a class="btn" data-social="telegram" href="https://t.me/mallimako?utm_source=linkinbio&utm_medium=website&utm_campaign=mako" target="_blank" rel="noopener" aria-label="Telegram"><span class="l" id="t-telegram">کەناڵی تێلەگرام</span><span class="r">↗</span></a>
+          <!-- Threads #1 (بابات مميزة) -->
+          <a class="btn" data-social="threads1" href="https://www.threads.com/@malle_mako?igshid=NTc4MTIwNjQ2YQ==" target="_blank" rel="noopener" aria-label="Threads"><span class="l">Threads</span><span class="r">↗</span></a>
+          <!-- Telegram (نص إنجليزي في كل اللغات) -->
+          <a class="btn" data-social="telegram" href="https://t.me/mallimako?utm_source=linkinbio&utm_medium=website&utm_campaign=mako" target="_blank" rel="noopener" aria-label="Telegram"><span class="l" id="t-telegram">Telegram Channel</span><span class="r">↗</span></a>
         </div>
       </section>
 
@@ -128,6 +131,8 @@
           <a class="btn" data-social="tiktok2" href="https://www.tiktok.com/@mallymako2?utm_source=linkinbio&utm_medium=website&utm_campaign=mako" target="_blank" rel="noopener"><span class="l">TikTok 2</span><span class="r">↗</span></a>
           <a class="btn" data-social="instagram2" href="https://www.instagram.com/chaqokanimako?utm_source=linkinbio&utm_medium=website&utm_campaign=mako" target="_blank" rel="noopener"><span class="l">Instagram 2</span><span class="r">↗</span></a>
           <a class="btn" data-social="facebook2" href="https://www.facebook.com/share/1GbsF2TjgC/?mibextid=wwXIfr&utm_source=linkinbio&utm_medium=website&utm_campaign=mako" target="_blank" rel="noopener"><span class="l">Facebook 2</span><span class="r">↗</span></a>
+          <!-- Threads #2 (قسم السكاكين) -->
+          <a class="btn" data-social="threads2" href="https://www.threads.com/@chaqokanimako?igshid=NTc4MTIwNjQ2YQ==" target="_blank" rel="noopener" aria-label="Threads"><span class="l">Threads 2</span><span class="r">↗</span></a>
         </div>
       </section>
 
@@ -233,7 +238,7 @@
         direct_call:"پەیوەندی ڕاستەوخۆ:",
         call_0770:"پەیوەندی 0770", call_0750:"پەیوەندی 0750",
         copy:"کۆپی ژمارە",
-        telegram:"کەناڵی تێلەگرام",
+        telegram:"Telegram Channel",
         address_title:"📍 ناونیشان",
         addr1:"سلێمانی - ناوبازاڕ - پشت بازاڕی جەوازەکە",
         addr2:"بازاڕی حاجی حەمە سور - نهۆمی ژێرزەمین - دوکانی ژمارە ٤٦",
@@ -256,7 +261,7 @@
         direct_call:"اتصال مباشر:",
         call_0770:"اتصال 0770", call_0750:"اتصال 0750",
         copy:"نسخ الرقم",
-        telegram:"قناتنا على تليجرام",
+        telegram:"Telegram Channel",
         address_title:"📍 العنوان",
         addr1:"السليمانية - السوق - خلف سوق الجوازات",
         addr2:"سوق حاجي حمه سور - الطابق السفلي - محل رقم ٤٦",
@@ -279,7 +284,7 @@
         direct_call:"Direct Call:",
         call_0770:"Call 0770", call_0750:"Call 0750",
         copy:"Copy Number",
-        telegram:"Our Telegram Channel",
+        telegram:"Telegram Channel",
         address_title:"📍 Address",
         addr1:"Sulaimaniyah - Naw Bazaar - Behind the Passport Bazaar",
         addr2:"Haji Hama Sur Bazaar - Basement Floor - Shop No. 46",
@@ -354,6 +359,10 @@
       });
 
       localStorage.setItem('mako_lang', lang);
+
+      // تأكيد تسمية التليجرام إنجليزية في جميع اللغات
+      const telegramEl = document.getElementById('t-telegram');
+      if (telegramEl) telegramEl.textContent = "Telegram Channel";
     }
 
     function showToast(t){ el.toast.textContent = t; el.toast.style.display='block'; setTimeout(()=> el.toast.style.display='none', 1400); }
